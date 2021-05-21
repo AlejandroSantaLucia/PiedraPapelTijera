@@ -1,4 +1,5 @@
 ///////////////// opcion pc ///////////////////////////
+
 let minimo = 1
 let maximo = 3  
 const pc = (minimo, maximo) => {
@@ -22,75 +23,115 @@ const pcOption = () => {
 }
 
 /////////////////// Respuesta pc /////////////////////////////////////
-const pcOptionPiedra = () => {  
+
+const playerOptionPiedra = () => {  
   const pcResult = pc(minimo, maximo); 
-  // console.log(pcResult)
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("EMPATE")
+    console.log("EMPATE"),
+    showPiedra(),showTie()
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("PERDISTE")
+    console.log("PERDISTE"),
+    showPapel(),showLose()
   }
   else {return console.log("pc elige tijera"),
-  console.log("GANASTE")}
+  console.log("GANASTE"),
+  showTijera(),showWon()}
 }
 
-const pcOptionPapel = () => {  
+const playerOptionPapel = () => {  
   const pcResult = pc(minimo, maximo); 
-  // console.log(pcResult)
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("GANASTE")
+    console.log("GANASTE"),
+    showPiedra(),showWon()    
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("EMPATE")
+    console.log("EMPATE"),
+    showPapel(),showTie()
   }
   else {return console.log("pc elige tijera"),
-  console.log("PERDISTE")}
+  console.log("PERDISTE"),
+  showTijera(),showLose()}
 }
 
-const pcOptionTijera = () => {  
+const playerOptionTijera = () => {  
   const pcResult = pc(minimo, maximo); 
-  // console.log(pcResult)
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("EMPATE")
+    console.log("PERDISTE"),
+    showPiedra(),showWon()
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("PERDISTE")
+    console.log("GANASTE"),
+    showPapel(),showLose()
   }
   else {return console.log("pc elige tijera"),
-  console.log("EMPATE")}
+  console.log("EMPATE"),
+  showTijera(),showTie()}
 }
-
-
-
-
-
-
-
-// const buttonPrueba = document.getElementById('ButtonPrueba')
-
-// buttonPrueba.addEventListener('click', () => pcOption())
-
-
 
 ////////////////////////////// botones de opciones /////////////////////////////////////////
-
 
 const piedra = document.getElementById('Piedra')
 const papel = document.getElementById('Papel')
 const tijera = document.getElementById('Tijera')
 
-piedra.addEventListener('click',() =>{pcOptionPiedra()  
+piedra.addEventListener('click',() =>{playerOptionPiedra()  
 })
-papel.addEventListener('click', () => {pcOptionPiedra()  
+papel.addEventListener('click', () => {playerOptionPapel()  
 })
-tijera.addEventListener('click', () => {pcOptionPiedra()  
+tijera.addEventListener('click', () => {playerOptionTijera()  
 })
 
+/////////////////////// resultado mostrado PC ////////////////////
 
+const pcPiedra = document.getElementById('pcPiedra')
+const pcPapel = document.getElementById('pcPapel')
+const pcTijera = document.getElementById('pcTijera')
+
+const showPiedra = () => {
+  pcPiedra.style.display = "flex",
+  pcPapel.style.display = "none",
+  pcTijera.style.display = "none"
+}
+const showPapel = () => {
+  pcPiedra.style.display = "none",
+  pcPapel.style.display = "flex",
+  pcTijera.style.display = "none"
+}
+const showTijera = () => {
+  pcPiedra.style.display = "none",
+  pcPapel.style.display = "none",
+  pcTijera.style.display = "flex"
+}
+
+/////////////////////////// mostrar resultado choque //////////////////////////////////////
+
+const choose = document.getElementById('choose')
+const won = document.getElementById('won')
+const tie = document.getElementById('tie')
+const lose = document.getElementById('lose')
+
+const showWon = () => {
+  choose.style.display = "none",
+  won.style.display = "flex",
+  tie.style.display = "none",
+  lose.style.display = "none"
+}
+const showTie = () => {
+  choose.style.display = "none",
+  won.style.display = "none",
+  tie.style.display = "flex",
+  lose.style.display = "none"
+}
+const showLose = () => {
+  choose.style.display = "none",
+  won.style.display = "none",
+  tie.style.display = "none",
+  lose.style.display = "flex"
+}
