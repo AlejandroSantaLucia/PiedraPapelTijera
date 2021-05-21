@@ -1,3 +1,27 @@
+:root {
+  --MainBlue: #23273e;
+  --alternativeBlue: #151727b9;
+  --ligth: #5cc5a6;
+  --alternativeLigth: #428f78c9;
+
+
+  --regularShadow: 12px 12px 24px #1c1f32,
+                -12px -12px 24px #2a2f4a;
+
+  --valleyShadow: inset 12px 12px 24px #1c1f32,
+                    inset -12px -12px 24px #2a2f4a;              
+
+  --downBackground: linear-gradient(145deg, #202338, #252a42);
+  
+  --upBackground: linear-gradient(145deg, #252a42, #202338);
+
+  
+
+}
+
+
+
+
 *{
   box-sizing: border-box;
   margin: 0;
@@ -6,26 +30,33 @@
 header {
   width: 100%;
   height: 80px;
-  background-color: green;
+  background: var(--MainBlue);
+  box-shadow:  var(--regularShadow) 
 }
 
 i{
   font-size: 80px;
   width: 80px;
   height: 80px;
+  align-items: center;
+  justify-content: center;
 }
 
 main{
-  background-color: greenyellow;
+  font-family: 'Press Start 2P', cursive;
+  color: var(--ligth);
+
   height: 85vh;
   position:relative;  
+  background: var(--MainBlue);
+  box-shadow: var(--regularShadow)
 }
 
 
 .mainContainer{
   width: 80%;
   height: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -35,7 +66,7 @@ main{
 
 
 .pcOptions__container{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   display: flex;
   height: 40%;
@@ -47,30 +78,26 @@ main{
 
 .pcOption{
   display: flex;
-  align-items: center;
   position: absolute;
-  background-color: grey;
+  /* background-color: grey; */
   border-radius: 50%;
   padding: 60px;
   text-align: center;
+  background: var(--MainBlue);
+  box-shadow:  var(--regularShadow)
 }
 
-
-.pcPiedra{
+.pcOption i {
   display: none;
-  
 }
-.pcPapel{
-  display: none;
-
-}
-.pcTijera{
-  display: none;
-
+.pcOption .startPcOption{
+  display: flex;
+  width: 80px;
+  height: 80px;
 }
 
 .result__container{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   height: 25%;
   display: flex;
@@ -80,30 +107,35 @@ main{
 }
 
 .results{
-  min-width: 300px;
-  width: 60%;
+  min-width: 500px;
+  width: 80%;
   height: 50%;
-  background-color: orange;
+  /* background-color: orange; */
   position:relative;
+  border-radius: 5%;
+  background: var(--MainBlue);
+  box-shadow: var(--regularShadow)
 }
 
 
 .result{
-  width: 300px;
+  width: 500px;
   height: 32px;
-  background-color: orchid;
+  /* background-color: orchid; */
   position: absolute;
   top: calc(50% - 16px);
-  left: calc(50% - 150px);
+  left: calc(50% - 250px);
   display: none;
   justify-content: center;
+  /* background: var(--upBackground);
+  box-shadow:  var(--regularShadow) */
 }
 .choose{
   display: flex;
 }
 
 .playerOptions__container{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -115,14 +147,25 @@ main{
 
 
 .playerOption {
-  background-color: grey;
+  /* background-color: grey; */
   border-radius: 50%;
   padding: 40px;
   text-align: center;
-  /* width: 150px;
-  height: 150px; */
+  background: var(--upBackground);
+  box-shadow:  var(--regularShadow);
+  
+  color: var(--alternativeBlue);
+  border: solid 1px var(--alternativeBlue);
 }
 
 
+.playerOption:hover{
+  background: var(--downBackground);
+  box-shadow:  var(--regularShadow);
+}
 
 
+.playerOption:active{
+  color: var(--ligth);
+  border: solid 1px var(--alternativeLigth);
+}

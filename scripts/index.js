@@ -90,21 +90,25 @@ tijera.addEventListener('click', () => {playerOptionTijera()
 
 /////////////////////// resultado mostrado PC ////////////////////
 
+const startPcOption = document.getElementById('startPcOption')
 const pcPiedra = document.getElementById('pcPiedra')
 const pcPapel = document.getElementById('pcPapel')
 const pcTijera = document.getElementById('pcTijera')
 
 const showPiedra = () => {
+  startPcOption.style.display = "none",
   pcPiedra.style.display = "flex",
   pcPapel.style.display = "none",
   pcTijera.style.display = "none"
 }
 const showPapel = () => {
+  startPcOption.style.display = "none",
   pcPiedra.style.display = "none",
   pcPapel.style.display = "flex",
   pcTijera.style.display = "none"
 }
 const showTijera = () => {
+  startPcOption.style.display = "none",
   pcPiedra.style.display = "none",
   pcPapel.style.display = "none",
   pcTijera.style.display = "flex"
