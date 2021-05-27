@@ -1,0 +1,35 @@
+
+.pcOptionGlass{
+   /* animation-name: fadeOutGlass;  */
+   animation-duration: 3s; 
+   animation-fill-mode: forwards;
+   border-radius: 50%;
+   border: 1px solid rgba( 255, 255, 255, 0.18 )
+}
+
+
+
+
+
+  /* @keyframes fadeOutGlass{ 
+    0%{ opacity: 1; } 
+    30%{opacity: 1;}
+    100% { opacity: 0;
+    transform: rotate(95deg); }
+  } */
+
+  @keyframes fadeInGlass{ 
+    0%{ opacity: 0; } 
+    /* 30%{opacity: 1;} */
+    100% { opacity: 1;
+    transform: rotate(95deg); }
+  }
+
+
+  @keyframes fadeOutGlass{ 
+    0%{ opacity: 1; } 
+    15%{opacity: 1;}
+    50% { opacity: 0;
+    transform: rotate(95deg); }
+    100%{ opacity: 1; }
+  }

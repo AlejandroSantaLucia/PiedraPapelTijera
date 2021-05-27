@@ -1,4 +1,8 @@
 ///////////////// opcion pc ///////////////////////////
+// 1 = piedra
+// 2 = papel
+// 3 = tijera
+
 
 let minimo = 1
 let maximo = 3  
@@ -26,6 +30,7 @@ const pcOption = () => {
 
 const playerOptionPiedra = () => {  
   const pcResult = pc(minimo, maximo); 
+  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     console.log("EMPATE"),
@@ -43,6 +48,7 @@ const playerOptionPiedra = () => {
 
 const playerOptionPapel = () => {  
   const pcResult = pc(minimo, maximo); 
+  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     console.log("GANASTE"),
@@ -60,6 +66,7 @@ const playerOptionPapel = () => {
 
 const playerOptionTijera = () => {  
   const pcResult = pc(minimo, maximo); 
+  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     console.log("PERDISTE"),
@@ -81,14 +88,14 @@ const piedra = document.getElementById('Piedra')
 const papel = document.getElementById('Papel')
 const tijera = document.getElementById('Tijera')
 
-piedra.addEventListener('click',() =>{playerOptionPiedra()  
+piedra.addEventListener('click',() =>{playerOptionPiedra()
 })
 papel.addEventListener('click', () => {playerOptionPapel()  
 })
 tijera.addEventListener('click', () => {playerOptionTijera()  
 })
 
-/////////////////////// resultado mostrado PC ////////////////////
+///////////////////////////// resultado mostrado PC ///////////////////////////
 
 const startPcOption = document.getElementById('startPcOption')
 const pcPiedra = document.getElementById('pcPiedra')
@@ -138,4 +145,15 @@ const showLose = () => {
   won.style.display = "none",
   tie.style.display = "none",
   lose.style.display = "flex"
+}
+
+
+/////////////////////////////// animar resultado pc /////////////////////////////////////
+
+const pcOptionGlass = document.getElementById('pcOptionGlass')
+
+
+const resultAnimation = () => {
+  pcOptionGlass.style.animationName= "fadeOutGlass "
+
 }

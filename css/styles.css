@@ -29,7 +29,7 @@
 
 header {
   width: 100%;
-  height: 80px;
+  height: 50px;
   background: var(--MainBlue);
   box-shadow:  var(--regularShadow) 
 }
@@ -46,7 +46,7 @@ main{
   font-family: 'Press Start 2P', cursive;
   color: var(--ligth);
 
-  height: 85vh;
+  height: 90vh;
   position:relative;  
   background: var(--MainBlue);
   box-shadow: var(--regularShadow)
@@ -87,6 +87,19 @@ main{
   box-shadow:  var(--regularShadow)
 }
 
+.pcOptionGlass{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  background-image: url("../assets/img/glassBackground.jpg");
+  background-position: center;
+  background-size: contain;
+  background-color: var(--MainBlue);
+}
+
 .pcOption i {
   display: none;
 }
@@ -110,18 +123,21 @@ main{
   min-width: 500px;
   width: 80%;
   height: 50%;
-  /* background-color: orange; */
   position:relative;
   border-radius: 5%;
-  background: var(--MainBlue);
-  box-shadow: var(--regularShadow)
+  /* background: var(--MainBlue);
+  box-shadow: var(--regularShadow) */
+  background-image: url(../assets/img/resultBackground4.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px solid var(--alternativeBlue);
 }
+
 
 
 .result{
   width: 500px;
   height: 32px;
-  /* background-color: orchid; */
   position: absolute;
   top: calc(50% - 16px);
   left: calc(50% - 250px);
@@ -129,7 +145,9 @@ main{
   justify-content: center;
   /* background: var(--upBackground);
   box-shadow:  var(--regularShadow) */
+  user-select: none;
 }
+
 .choose{
   display: flex;
 }
