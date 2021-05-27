@@ -3,6 +3,8 @@
   --alternativeBlue: #151727b9;
   --ligth: #5cc5a6;
   --alternativeLigth: #428f78c9;
+  --alertRed: #ff2d2d;
+  --neutralYellow: #c4df6d;
 
 
   --regularShadow: 12px 12px 24px #1c1f32,
@@ -148,6 +150,13 @@ main{
   user-select: none;
 }
 
+.tie{
+  color:var(--neutralYellow)
+}
+.lose{
+  color: var(--alertRed);
+}
+
 .choose{
   display: flex;
 }
@@ -184,6 +193,6 @@ main{
 
 
 .playerOption:active{
-  color: var(--ligth);
-  border: solid 1px var(--alternativeLigth);
+  /* color: var(--ligth);
+  border: solid 1px var(--alternativeLigth); */
 }

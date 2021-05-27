@@ -29,57 +29,51 @@ const pcOption = () => {
 /////////////////// Respuesta pc /////////////////////////////////////
 
 const playerOptionPiedra = () => {  
+  resultAnimationOn();
   const pcResult = pc(minimo, maximo); 
-  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("EMPATE"),
     showPiedra(),showTie()
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("PERDISTE"),
     showPapel(),showLose()
   }
   else {return console.log("pc elige tijera"),
-  console.log("GANASTE"),
-  showTijera(),showWon()}
+    showTijera(),showWon()};
+  // resultAnimationOff()
 }
 
 const playerOptionPapel = () => {  
+  resultAnimationOn();
   const pcResult = pc(minimo, maximo); 
-  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("GANASTE"),
     showPiedra(),showWon()    
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("EMPATE"),
     showPapel(),showTie()
   }
   else {return console.log("pc elige tijera"),
-  console.log("PERDISTE"),
-  showTijera(),showLose()}
+    showTijera(),showLose()};
+  // resultAnimationOff()
 }
 
 const playerOptionTijera = () => {  
+  resultAnimationOn();
   const pcResult = pc(minimo, maximo); 
-  resultAnimation();
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    console.log("PERDISTE"),
     showPiedra(),showWon()
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    console.log("GANASTE"),
     showPapel(),showLose()
   }
   else {return console.log("pc elige tijera"),
-  console.log("EMPATE"),
-  showTijera(),showTie()}
+    showTijera(),showTie()};
+  // resultAnimationOff()
 }
 
 ////////////////////////////// botones de opciones /////////////////////////////////////////
@@ -88,12 +82,50 @@ const piedra = document.getElementById('Piedra')
 const papel = document.getElementById('Papel')
 const tijera = document.getElementById('Tijera')
 
-piedra.addEventListener('click',() =>{playerOptionPiedra()
+piedra.addEventListener('click',() =>{
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionPiedra(), colorTurnOn(piedra)} 
+  else {resultAnimationOff(), showChoose() }
 })
-papel.addEventListener('click', () => {playerOptionPapel()  
+papel.addEventListener('click', () => {
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionPapel(), colorTurnOn(papel)} 
+  else {resultAnimationOff(), showChoose() } 
 })
-tijera.addEventListener('click', () => {playerOptionTijera()  
+tijera.addEventListener('click', () => {
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionTijera(), colorTurnOn(tijera)} 
+  else {resultAnimationOff(), showChoose()}  
 })
+
+const colorTurnOn = (a) => {
+  a.style.color ="#5cc5a6";
+  a.style.border ="solid 1px #428f78c9";
+}
+
+////////////////////////////// reset botones //////////////////////////////
+
+
+
+
+
+
+
+// const mainContainer = document.getElementById('mainContainer')
+// const playerOption = document.getElementsByClassName('playerOption')
+
+// const colorTurnOff = () => {
+//   b.style.color ="#151727b9";
+//   b.style.border ="solid 1px #151727b9";
+// }
+ 
+// mainContainer.addEventListener('click', (playerOption) =>{
+//   if(pcOptionGlass.style.animationName ="fadeOutGlass"){colorTurnOff(playerOption)}
+//   // if(colorTurnOn(piedra, papel, tijera) = true){colorTurnOff(piedra, papel, tijera)}
+// })
+
+
+
+// document.getElementById
+
+
 
 ///////////////////////////// resultado mostrado PC ///////////////////////////
 
@@ -128,6 +160,14 @@ const won = document.getElementById('won')
 const tie = document.getElementById('tie')
 const lose = document.getElementById('lose')
 
+
+
+const showChoose = () => {
+  choose.style.display = "flex",
+  won.style.display = "none",
+  tie.style.display = "none",
+  lose.style.display = "none"
+}
 const showWon = () => {
   choose.style.display = "none",
   won.style.display = "flex",
@@ -148,12 +188,21 @@ const showLose = () => {
 }
 
 
-/////////////////////////////// animar resultado pc /////////////////////////////////////
+/////////////////////////////// animar opción pc /////////////////////////////////////
 
 const pcOptionGlass = document.getElementById('pcOptionGlass')
 
 
-const resultAnimation = () => {
-  pcOptionGlass.style.animationName= "fadeOutGlass "
+const resultAnimationOn = () => {
+  pcOptionGlass.style.animation= "fadeOutGlass 3s forwards"
 
 }
+const resultAnimationOff = () => {
+  pcOptionGlass.style.animation= "fadeInGlass 1s"
+}
+
+//////////////////////////// animar resultado //////////////////////////////
+
+
+
+

@@ -1,35 +1,61 @@
 
+/*//////// Animación opción PC //////*/
+
 .pcOptionGlass{
    /* animation-name: fadeOutGlass;  */
-   animation-duration: 3s; 
-   animation-fill-mode: forwards;
+   /* animation-duration: 3s;  */
+   /* animation-fill-mode: forwards; */
    border-radius: 50%;
    border: 1px solid rgba( 255, 255, 255, 0.18 )
 }
-
-
-
-
-
-  /* @keyframes fadeOutGlass{ 
+  @keyframes fadeOutGlass{ 
     0%{ opacity: 1; } 
     30%{opacity: 1;}
     100% { opacity: 0;
     transform: rotate(95deg); }
-  } */
+  }
 
   @keyframes fadeInGlass{ 
-    0%{ opacity: 0; } 
-    /* 30%{opacity: 1;} */
+    0%{ opacity: 0; 
+      transform: rotate(95deg)} 
     100% { opacity: 1;
-    transform: rotate(95deg); }
+    transform: rotate(360deg); }
   }
 
 
-  @keyframes fadeOutGlass{ 
-    0%{ opacity: 1; } 
-    15%{opacity: 1;}
-    50% { opacity: 0;
-    transform: rotate(95deg); }
-    100%{ opacity: 1; }
+  /*////////// Animación cartel result ////////*/
+
+  .result {
+    animation: flicker 5s infinite, showResult 6s;
+    /* animation-iteration-count: infinite; */
+    /* animation: showResult 3s; */
   }
+
+@keyframes flicker{
+  0%{ opacity: 0;}
+  10%{opacity: 1;}
+  50%{opacity: 1;}
+  51%{opacity: 0;}
+  52%{opacity: 1;}
+  60%{opacity: 1;}
+  61%{opacity: 0;}
+  62%{opacity: 1;}
+}
+
+@keyframes showResult {
+  0% {opacity:0}
+  30% {opacity:0}
+  100% {opacity:1}
+}
+
+.choose{
+  animation: showChoose 2s
+}
+@keyframes showChoose {
+  0% {opacity:0}
+  30% {opacity:0}
+  100% {opacity:1}
+}
+
+/*//////////// Animación botonera /////////////*/
+
