@@ -7,7 +7,7 @@
   --neutralYellow: #c4df6d;
 
 
-  --regularShadow: 12px 12px 24px #1c1f32,
+  /* --regularShadow: 12px 12px 24px #1c1f32,
                 -12px -12px 24px #2a2f4a;
 
   --valleyShadow: inset 12px 12px 24px #1c1f32,
@@ -15,7 +15,18 @@
 
   --downBackground: linear-gradient(145deg, #202338, #252a42);
   
-  --upBackground: linear-gradient(145deg, #252a42, #202338);
+  --upBackground: linear-gradient(145deg, #252a42, #202338); */
+
+
+  --regularShadow: 46px 46px 92px #0f111b,
+  -46px -46px 92px #373d61;
+
+  --valleyShadow: 46px 46px 92px #0f111b,
+  -46px -46px 92px #373d61;           
+
+  --downBackground: linear-gradient(145deg, #202338, #252a42);
+  
+  --upBackground: linear-gradient(145deg, #202338, #252a42);
 
   
 
