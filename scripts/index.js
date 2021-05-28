@@ -41,7 +41,6 @@ const playerOptionPiedra = () => {
   }
   else {return console.log("pc elige tijera"),
     showTijera(),showWon()};
-  // resultAnimationOff()
 }
 
 const playerOptionPapel = () => {  
@@ -57,7 +56,6 @@ const playerOptionPapel = () => {
   }
   else {return console.log("pc elige tijera"),
     showTijera(),showLose()};
-  // resultAnimationOff()
 }
 
 const playerOptionTijera = () => {  
@@ -73,7 +71,6 @@ const playerOptionTijera = () => {
   }
   else {return console.log("pc elige tijera"),
     showTijera(),showTie()};
-  // resultAnimationOff()
 }
 
 ////////////////////////////// botones de opciones /////////////////////////////////////////
@@ -83,16 +80,28 @@ const papel = document.getElementById('Papel')
 const tijera = document.getElementById('Tijera')
 
 piedra.addEventListener('click',() =>{
-  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionPiedra(), colorTurnOn(piedra)} 
-  else {resultAnimationOff(), showChoose() }
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){
+    playerOptionPiedra(), 
+    colorTurnOn(piedra), 
+    modalOn()
+  } 
+  else {}
 })
 papel.addEventListener('click', () => {
-  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionPapel(), colorTurnOn(papel)} 
-  else {resultAnimationOff(), showChoose() } 
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){
+    playerOptionPapel(), 
+    colorTurnOn(papel), 
+    modalOn()
+  } 
+  else {} 
 })
 tijera.addEventListener('click', () => {
-  if (pcOptionGlass.style.animationName !="fadeOutGlass"){playerOptionTijera(), colorTurnOn(tijera)} 
-  else {resultAnimationOff(), showChoose()}  
+  if (pcOptionGlass.style.animationName !="fadeOutGlass"){
+    playerOptionTijera(), 
+    colorTurnOn(tijera), 
+    modalOn()
+  } 
+  else {}  
 })
 
 const colorTurnOn = (a) => {
@@ -100,32 +109,61 @@ const colorTurnOn = (a) => {
   a.style.border ="solid 1px #428f78c9";
 }
 
-////////////////////////////// reset botones //////////////////////////////
+////////////////////////////// reset modal //////////////////////////////
+
+const resetModal = document.getElementById('resetModal')
+
+
+const modalOn = () => {
+  resetModal.style.display = "flex"
+}
+const modalOff = () => {
+  resetModal.style.display = "none"
+}
 
 
 
 
+const colorTurnOff = () => {
+  piedra.style.color ="#151727b9";
+  piedra.style.border ="solid 1px #151727b9";
+  papel.style.color ="#151727b9";
+  papel.style.border ="solid 1px #151727b9";
+  tijera.style.color ="#151727b9";
+  tijera.style.border ="solid 1px #151727b9";
+}
 
+resetModal.addEventListener('click',() => {
+    modalOff(), 
+    resultAnimationOff(), 
+    showChoose(),
+    colorTurnOff()
+  })
 
+// resetModal.addEventListener('click',() => {
+//   setTimeout(() => {
+//     modalOff()}, 2000), 
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//   })
 
-// const mainContainer = document.getElementById('mainContainer')
-// const playerOption = document.getElementsByClassName('playerOption')
+// resetModal.addEventListener('click',() => {
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//     if (choose.style.display = "flex"){modalOff()}
+//     else{}
+//   })
 
-// const colorTurnOff = () => {
-//   b.style.color ="#151727b9";
-//   b.style.border ="solid 1px #151727b9";
-// }
- 
-// mainContainer.addEventListener('click', (playerOption) =>{
-//   if(pcOptionGlass.style.animationName ="fadeOutGlass"){colorTurnOff(playerOption)}
-//   // if(colorTurnOn(piedra, papel, tijera) = true){colorTurnOff(piedra, papel, tijera)}
-// })
-
-
-
-// document.getElementById
-
-
+// resetModal.addEventListener('click',() => {
+//     if (pcOptionGlass.style.opacity = "0"){
+//       modalOff()}
+//     else{}
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//   })
 
 ///////////////////////////// resultado mostrado PC ///////////////////////////
 

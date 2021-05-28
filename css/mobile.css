@@ -1,0 +1,61 @@
+header{
+  justify-content: center;
+}
+i{
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+}
+
+.pcOption{
+  padding: 40px;
+}
+
+.pcOption .startPcOption{
+  width: 60px;
+  height: 60px;
+}
+
+.pcOptionGlass{
+  top: calc(50% - 70px);
+  left: calc(50% - 70px);
+}
+
+
+.results__container{
+  height: 55px;
+}
+
+
+.results{
+  min-width: 0;
+  overflow: hidden;
+  height: 100%;
+
+}
+
+.result{
+
+}
+
+h2{
+  font-size: 1rem;
+}
+
+
+.playerOptions__container{
+  flex-wrap: wrap;
+  height: 40%;
+}
+
+
+.playerOption{
+  padding: 20px;
+  margin: 5px;
+}
+
+.playerOption i {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+}

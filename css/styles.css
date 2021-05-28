@@ -44,7 +44,19 @@ header {
   width: 100%;
   height: 50px;
   background: var(--MainBlue);
-  box-shadow:  var(--regularShadow) 
+  box-shadow:  var(--regularShadow);
+  display: flex;
+  align-items: center;
+
+}
+
+.header__logo-container{
+  width: 150px;
+  height: 40px;
+  background-image: url("../assets/img/LogoAleInvertidoVector.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 i{
@@ -74,9 +86,19 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   
 }
 
+.resetModal{
+  width: 100%;
+  height: 100%;
+  /* background-color: crimson; */
+  opacity: .2;
+  position: absolute;
+  z-index: 9;
+  display: none;
+}
 
 .pcOptions__container{
   /* border: 2px solid blue; */
@@ -123,7 +145,7 @@ main{
 }
 
 .result__container{
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   width: 100%;
   height: 25%;
   display: flex;
@@ -133,6 +155,7 @@ main{
 }
 
 .results{
+  border: 2px solid red;
   min-width: 500px;
   width: 80%;
   height: 50%;
@@ -140,7 +163,7 @@ main{
   border-radius: 5%;
   /* background: var(--MainBlue);
   box-shadow: var(--regularShadow) */
-  background-image: url(../assets/img/resultBackground4.jpg);
+  background-image: url(../assets/img/resultBackground.jpg);
   background-position: center;
   background-size: cover;
   border: 1px solid var(--alternativeBlue);
@@ -149,6 +172,7 @@ main{
 
 
 .result{
+  border: 2px solid green;
   width: 500px;
   height: 32px;
   position: absolute;
