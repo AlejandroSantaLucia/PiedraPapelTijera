@@ -121,15 +121,8 @@ const modalOff = () => {
   resetModal.style.display = "none"
 }
 
-// resetModal.addEventListener('click',() => {modalOff(), resultAnimationOff(), showChoose(),colorTurnOff()})
-resetModal.addEventListener('click',() => {
-  setTimeout(() => {
-    modalOff()}, 3000), 
-    resultAnimationOff(), 
-    showChoose(),
-    colorTurnOff()
-  })
-// resetModal.addEventListener('click',() => {delayResetModal()})
+
+
 
 const colorTurnOff = () => {
   piedra.style.color ="#151727b9";
@@ -140,7 +133,37 @@ const colorTurnOff = () => {
   tijera.style.border ="solid 1px #151727b9";
 }
 
-const delayResetModal = setTimeout(() => {modalOff(), resultAnimationOff(), showChoose(),colorTurnOff()}, 4000)
+resetModal.addEventListener('click',() => {
+    modalOff(), 
+    resultAnimationOff(), 
+    showChoose(),
+    colorTurnOff()
+  })
+
+// resetModal.addEventListener('click',() => {
+//   setTimeout(() => {
+//     modalOff()}, 2000), 
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//   })
+
+// resetModal.addEventListener('click',() => {
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//     if (choose.style.display = "flex"){modalOff()}
+//     else{}
+//   })
+
+// resetModal.addEventListener('click',() => {
+//     if (pcOptionGlass.style.opacity = "0"){
+//       modalOff()}
+//     else{}
+//     resultAnimationOff(), 
+//     showChoose(),
+//     colorTurnOff()
+//   })
 
 ///////////////////////////// resultado mostrado PC ///////////////////////////
 
