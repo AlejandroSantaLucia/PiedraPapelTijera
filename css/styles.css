@@ -63,7 +63,7 @@ main{
   height: 90vh;
   position:relative;  
   background: var(--MainBlue);
-  box-shadow: var(--valleyShadow)
+  /* box-shadow: var(--valleyShadow) */
 }
 
 
