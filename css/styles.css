@@ -44,7 +44,7 @@ header {
   width: 100%;
   height: 50px;
   background: var(--MainBlue);
-  box-shadow:  var(--regularShadow);
+  box-shadow:  var(--valleyShadow);
   display: flex;
   align-items: center;
 
@@ -74,7 +74,7 @@ main{
   height: 90vh;
   position:relative;  
   background: var(--MainBlue);
-  box-shadow: var(--regularShadow)
+  box-shadow: var(--valleyShadow)
 }
 
 
@@ -145,7 +145,7 @@ main{
 }
 
 .result__container{
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   width: 100%;
   height: 25%;
   display: flex;
@@ -155,33 +155,32 @@ main{
 }
 
 .results{
-  border: 2px solid red;
+  /* border: 2px solid red; */
   min-width: 500px;
   width: 80%;
   height: 50%;
   position:relative;
   border-radius: 5%;
-  /* background: var(--MainBlue);
-  box-shadow: var(--regularShadow) */
+  /* background: var(--MainBlue);*/
+  box-shadow: var(--regularShadow); 
   background-image: url(../assets/img/resultBackground.jpg);
   background-position: center;
   background-size: cover;
   border: 1px solid var(--alternativeBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 .result{
-  border: 2px solid green;
-  width: 500px;
+  /* border: 2px solid green; */
+  width: 100%;
   height: 32px;
   position: absolute;
-  top: calc(50% - 16px);
-  left: calc(50% - 250px);
   display: none;
   justify-content: center;
-  /* background: var(--upBackground);
-  box-shadow:  var(--regularShadow) */
   user-select: none;
 }
 
@@ -230,4 +229,17 @@ main{
 .playerOption:active{
   /* color: var(--ligth);
   border: solid 1px var(--alternativeLigth); */
+}
+
+
+
+footer{
+  background-color: var(--MainBlue);
+  font-family: sans-serif;
+  box-shadow: var(--valleyShadow);
+  text-align: end;
+  padding: 10px;
+  color: var(--ligth);
+  line-height: 20px;
+
 }

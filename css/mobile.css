@@ -23,7 +23,7 @@ i{
 
 
 .results__container{
-  height: 55px;
+  height: 20%;
 }
 
 
@@ -35,6 +35,12 @@ i{
 }
 
 .result{
+  /* top: calc(50% - 16px); */
+  left: 0;
+  right: 0;
+  text-align: center;
+  align-items: center;
+
 
 }
 
@@ -58,4 +64,12 @@ h2{
   font-size: 40px;
   width: 40px;
   height: 40px;
+}
+
+h5 {
+  font-size: .6rem;
+}
+
+footer{
+  text-align: center;
 }
