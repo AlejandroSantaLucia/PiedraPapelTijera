@@ -83,7 +83,9 @@ piedra.addEventListener('click',() =>{
   if (pcOptionGlass.style.animationName !="fadeOutGlass"){
     playerOptionPiedra(), 
     colorTurnOn(piedra), 
-    modalOn()
+    // modalOn()
+    setTimeout(() => {modalOn()  
+    }, 3000);
   } 
   else {}
 })
@@ -91,7 +93,9 @@ papel.addEventListener('click', () => {
   if (pcOptionGlass.style.animationName !="fadeOutGlass"){
     playerOptionPapel(), 
     colorTurnOn(papel), 
-    modalOn()
+    // modalOn()
+    setTimeout(() => {modalOn()  
+    }, 3000);
   } 
   else {} 
 })
@@ -99,7 +103,9 @@ tijera.addEventListener('click', () => {
   if (pcOptionGlass.style.animationName !="fadeOutGlass"){
     playerOptionTijera(), 
     colorTurnOn(tijera), 
-    modalOn()
+    // modalOn()
+    setTimeout(() => {modalOn()  
+    }, 3000);
   } 
   else {}  
 })
@@ -114,9 +120,11 @@ const colorTurnOn = (a) => {
 const resetModal = document.getElementById('resetModal')
 
 
+
 const modalOn = () => {
   resetModal.style.display = "flex"
 }
+
 const modalOff = () => {
   resetModal.style.display = "none"
 }

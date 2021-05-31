@@ -81,7 +81,7 @@ main{
 .resetModal{
   width: 100%;
   height: 100%;
-  /* background-color: crimson; */
+  background-color: crimson;
   opacity: .2;
   position: absolute;
   z-index: 9;
