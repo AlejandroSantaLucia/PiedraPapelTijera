@@ -63,11 +63,11 @@ const playerOptionTijera = () => {
   const pcResult = pc(minimo, maximo); 
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
-    showPiedra(),showWon()
+    showPiedra(),showLose()
   }
   else if (pcResult == 2) {
     return console.log("pc elige papel"),
-    showPapel(),showLose()
+    showPapel(),showWon()
   }
   else {return console.log("pc elige tijera"),
     showTijera(),showTie()};
