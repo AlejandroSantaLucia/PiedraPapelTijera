@@ -1,0 +1,28 @@
+  .results{
+    min-width: 0;
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+  }
+
+  .result h2{
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+
+  .playerOptions__container{
+    flex-wrap: wrap;
+    height: 40%;
+  }  
+  
+  .playerOption{
+    padding: 25px;
+    margin: 8px;
+  }
+  
+  .playerOption i {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+  }
