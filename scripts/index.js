@@ -4,17 +4,17 @@
 // 3 = tijera
 
 
-let minimo = 1
-let maximo = 3  
-const pc = (minimo, maximo) => {
-  let possibilities = maximo - minimo;
+let minimum = 1
+let maximum = 3  
+const pc = (minimum, maximum) => {
+  let possibilities = maximum - minimum;
   let pcNumber = Math.random() * (possibilities + 1);
   pcNumber =  Math.floor(pcNumber)  
-  return minimo + pcNumber      
+  return minimum + pcNumber      
 }
 
 const pcOption = () => {  
-  const pcResult = pc(minimo, maximo); 
+  const pcResult = pc(minimum, maximum); 
   console.log(pcResult)
 
   if (pcResult == 1) {
@@ -30,7 +30,7 @@ const pcOption = () => {
 
 const playerOptionPiedra = () => {  
   resultAnimationOn();
-  const pcResult = pc(minimo, maximo); 
+  const pcResult = pc(minimum, maximum); 
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     showPiedra(),showTie()
@@ -45,7 +45,7 @@ const playerOptionPiedra = () => {
 
 const playerOptionPapel = () => {  
   resultAnimationOn();
-  const pcResult = pc(minimo, maximo); 
+  const pcResult = pc(minimum, maximum); 
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     showPiedra(),showWon()    
@@ -60,7 +60,7 @@ const playerOptionPapel = () => {
 
 const playerOptionTijera = () => {  
   resultAnimationOn();
-  const pcResult = pc(minimo, maximo); 
+  const pcResult = pc(minimum, maximum); 
   if (pcResult == 1) {
     return console.log("pc elige piedra"),
     showPiedra(),showLose()
@@ -119,8 +119,6 @@ const colorTurnOn = (a) => {
 
 const resetModal = document.getElementById('resetModal')
 
-
-
 const modalOn = () => {
   resetModal.style.display = "flex"
 }
@@ -128,9 +126,6 @@ const modalOn = () => {
 const modalOff = () => {
   resetModal.style.display = "none"
 }
-
-
-
 
 const colorTurnOff = () => {
   piedra.style.color ="#151727b9";
@@ -248,6 +243,9 @@ const resultAnimationOff = () => {
 }
 
 //////////////////////////// animar resultado //////////////////////////////
+
+
+//////////////////////////// recuento puntuación //////////////////////////////
 
 
 
